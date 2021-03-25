@@ -25,9 +25,7 @@ def find_number_in_binary_tree(file_name:str)->str:
             result+='-'
         else:
             result+='+'
-    with open("bintrees.out", "w+") as f:
-        for i in result:
-           f.write(i+'\n')
+    write_data_to_file(result,'findb_t.out')
     return result
 def binary_heap_finding(file_name:str)->List:
     data = read_data_from_file(file_name)
@@ -41,7 +39,5 @@ def binary_heap_finding(file_name:str)->List:
             heappush(heap,int(data[i]))
     write_data_to_file(res,'2b_h.out')
     return heap
-
-print(binary_heap_finding('/home/mukha/PycharmProjects/Algorithm_design_and_analysis/test/2.in'))
 
 
